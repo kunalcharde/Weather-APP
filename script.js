@@ -1,6 +1,6 @@
-let location1 = document.getElementById("location").value;
-let key = document.getElementById("access_key").value;
-const url = `https://api.weatherstack.com/current?access_key=${key}&query=${location1}`;
+var location1 = document.getElementById("location");
+var key = document.getElementById("access_key");
+const url = `http://api.weatherstack.com/current?access_key=${key.value}&query=${location1.value}`;
 
 function wheterdata(){
     
@@ -17,7 +17,7 @@ function wheterdata(){
 
 }
 function accesskey(){
-    checkforerror(location1,key)
+    checkforerror(location1.value,key.value)
 }
 function checkforerror(input1,input2){
     if(input1 ===""){
