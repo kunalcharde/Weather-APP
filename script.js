@@ -25,7 +25,7 @@ function checkforerror(input1,input2){
         alert("Please Enter Location")
     }
     else if (input2 ==""){
-        alert("Please Enter Location")
+        alert("Please Enter Accesskey")
     }
     else{
         wheterdata();
