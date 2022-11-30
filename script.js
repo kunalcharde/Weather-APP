@@ -5,7 +5,6 @@
 function wheterdata(){
     
     fetch(url).then(data => data.json()).then(responseData => {
-        console.log(responseData)
         document.getElementById("Location").innerHTML= "Location : "+responseData.location.name;
         document.getElementById("lat").innerHTML= "Lat : "+responseData.location.lat;
         document.getElementById("Time_Zone").innerHTML= "Time Zone : "+responseData.location.timezone_id;
@@ -21,10 +20,10 @@ function accesskey(){
     checkforerror(location1,key)
 }
 function checkforerror(input1,input2){
-    if(input1 ==""){
+    if(input1 ===""){
         alert("Please Enter Location")
     }
-    else if (input2 ==""){
+    else if (input2 ===""){
         alert("Please Enter Accesskey")
     }
     else{
