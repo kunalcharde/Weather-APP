@@ -19,7 +19,6 @@ function wheterdata(){
 function accesskey(){
     checkforerror(location1,key)
 }
-let input1,input2;
 function checkforerror(input1,input2){
     if(input1 ===""){
         alert("Please Enter Location")
