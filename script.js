@@ -1,8 +1,8 @@
-var location1 = document.getElementById("location");
+var loca = document.getElementById("location");
 var key = document.getElementById("access_key");
-const url = `http://api.weatherstack.com/current?access_key=${key.value}&query=${location1.value}`;
+const url = `http://api.weatherstack.com/current?access_key=${key.value}&query=${loca.value}`;
 
-function wheterdata(){
+function wheatherdata(){
     
     fetch(url).then(data => data.json()).then(responseData => {
         document.getElementById("Location").innerHTML= "Location : "+responseData.location.name;
@@ -17,7 +17,7 @@ function wheterdata(){
 
 }
 function accesskey(){
-    checkforerror(location1.value,key.value)
+    checkforerror(loca.value,key.value)
 }
 function checkforerror(input1,input2){
     if(input1 ===""){
@@ -27,6 +27,6 @@ function checkforerror(input1,input2){
         alert("Please Enter Accesskey")
     }
     else{
-        wheterdata();
+        wheatherdata();
     }
 }
