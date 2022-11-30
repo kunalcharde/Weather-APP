@@ -2,6 +2,22 @@ var loca = document.getElementById("location");
 var key = document.getElementById("access_key");
 const url = `http://api.weatherstack.com/current?access_key=${key.value}&query=${loca.value}`;
 
+function accesskey(){
+    checkforerror(loca.value,key.value)
+}
+
+function checkforerror(input1,input2){
+    if(input1 ===""){
+        alert("Please Enter Location")
+    }
+    else if (input2 ===""){
+        alert("Please Enter Accesskey")
+    }
+    else{
+        wheatherdata();
+    }
+}
+
 function wheatherdata(){
     
     fetch(url).then(data => data.json()).then(responseData => {
@@ -16,17 +32,4 @@ function wheatherdata(){
     })
 
 }
-function accesskey(){
-    checkforerror(loca.value,key.value)
-}
-function checkforerror(input1,input2){
-    if(input1 ===""){
-        alert("Please Enter Location")
-    }
-    else if (input2 ===""){
-        alert("Please Enter Accesskey")
-    }
-    else{
-        wheatherdata();
-    }
-}
+
