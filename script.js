@@ -21,10 +21,10 @@ function accesskey(){
     checkforerror(location1,key)
 }
 function checkforerror(input1,input2){
-    if(input1 ===""){
+    if(input1 ==""){
         alert("Please Enter Location")
     }
-    else if (input2===""){
+    else if (input2 ==""){
         alert("Please Enter Location")
     }
     else{
