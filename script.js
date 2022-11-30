@@ -4,7 +4,7 @@ function accesskey() {
 
   if (inputLocation.value !== "" && inputkey.value !== "") {
     const loc = document.getElementById("CityName").value;
-    const key = document.getElementById("access_key").value;
+    const key = "895e94cfdacce5c5d79fed9a0ca71102"
     const url = `http://api.weatherstack.com/current?access_key=${key}&query=${loc}}`;
 
     async function wheatherdata(url) {
