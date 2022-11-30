@@ -4,35 +4,33 @@ function accesskey() {
 
   if (inputLocation.value !== "" && inputkey.value !== "") {
     const loc = document.getElementById("CityName").value;
-    const key = "895e94cfdacce5c5d79fed9a0ca71102"
-    const url = `http://api.weatherstack.com/current?access_key=${key}&query=${loc}}`;
+    const token = document.getElementById("access_key").value;
+    const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${loc}?unitGroup=us&key=${token}&contentType=json`;
 
     async function wheatherdata(url) {
       const response = await fetch(url);
       data = await response.json();
-      console.log(data);
-      console.log(data.address);
-      document.getElementById("Location").innerHTML = "Location : " + data.location.name;
-      document.getElementById("lat").innerHTML = "Lat : " + data.location.lat;
+      document.getElementById("Location_name").innerHTML = "Location : " + data.address;
+      document.getElementById("lat").innerHTML = "Lat : " + data.latitude;
       document.getElementById("Time_Zone").innerHTML =
-        "Time Zone : " + data.location.timezone_id;
+        "Time Zone : " + data.timezone;
       document.getElementById("Wind_speed").innerHTML =
-        "Wind Speed : " + data.current.wind_speed;
+        "Wind Speed : " + data.currentConditions.windspeed;
       document.getElementById("pressure").innerHTML =
-        "Pressure : " + data.current.pressure;
+        "Pressure : " + data.currentConditions.pressure;
       document.getElementById("Humidity").innerHTML =
-        "Humidity : " + data.current.humidity;
+        "Humidity : " +data.currentConditions.humidity;
       document.getElementById("Wind_Direction").innerHTML =
-        "Wind Direction :  " + data.current.wind_dir;
+        "Wind Direction :  " + data.currentConditions.winddir;
       document.getElementById("UV_Index").innerHTML =
-        "UV Index : " + data.current.uv_index;
+        "UV Index : " + data.currentConditions.uvindex;
       document.getElementById("Feels_like").innerHTML =
-        "Feels like : " + data.current.feelslike;
+        "Feels like : " + data.currentConditions.feelslike;
     }
     wheatherdata(url);
   } else if (inputLocation.value == "") {
     alert("Please Enter Valid Location");
-  } else if (acesskey.value == "") {
+  } else if (inputkey.value == "") {
     alert("Please Enter Valid Acess Token");
   }
 }
