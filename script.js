@@ -1,6 +1,6 @@
 let location1 = document.getElementById("location").value;
 let key = document.getElementById("access_key").value;
-const url = `http://api.weatherstack.com/current?access_key=${key}&query=${location1}`;
+const url = `https://api.weatherstack.com/current?access_key=${key}&query=${location1}`;
 
 function wheterdata(){
     
