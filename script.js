@@ -26,6 +26,7 @@ function accesskey() {
         "UV Index : " + data.currentConditions.uvindex;
       document.getElementById("Feels_like").innerHTML =
         "Feels like : " + data.currentConditions.feelslike;
+      document.getElementById("display").style.display ="none";
     }
     wheatherdata(url);
   } else if (inputLocation.value == "") {

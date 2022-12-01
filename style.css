@@ -34,12 +34,13 @@ body {
     font-size: 40px
 }
 
-button {
+.btn1 {
     width: 20%;
     height: 50px;
     align-self: start;
     margin-top: 20px;
     font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
 }
 
 #container2 {
@@ -56,6 +57,10 @@ button {
     align-self: start;
     color: black;
     padding-left: 20px;
+    font-size:45px;
+    font-weight: 500;
+    font-family:'Times New Roman', Times, serif;
+
 }
 
 .data {
@@ -64,9 +69,41 @@ button {
     width: 80%;
     border: 2px solid black;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
 }
 .data p{
     color: black;
     font-size: 20px;
 
 }
+
+
+@media screen and (max-width: 480px) 
+    {
+        #container1 h1{
+            font-size:40px
+        }
+        #container1 input{
+            width:350px;
+            height:50px;
+            font-size:20px;
+        }
+        .btn1 {
+            
+            width: 100px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 20px;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #container2 h1{
+            padding: 0;
+            align-self: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .data h1{
+            font-size:25px;
+        }
+    }
