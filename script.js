@@ -10,6 +10,7 @@ function accesskey() {
     async function wheatherdata(url) {
       const response = await fetch(url);
       data = await response.json();
+       document.getElementById("display").style.display ="none";
       document.getElementById("Location_name").innerHTML = "Location : " + data.address;
       document.getElementById("lat").innerHTML = "Lat : " + data.latitude;
       document.getElementById("Time_Zone").innerHTML =
@@ -26,7 +27,7 @@ function accesskey() {
         "UV Index : " + data.currentConditions.uvindex;
       document.getElementById("Feels_like").innerHTML =
         "Feels like : " + data.currentConditions.feelslike;
-      document.getElementById("display").style.display ="none";
+     
     }
     wheatherdata(url);
   } else if (inputLocation.value == "") {
