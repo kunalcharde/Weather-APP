@@ -4,7 +4,7 @@ function accesskey() {
 
   if (inputLocation.value !== "" && inputkey.value !== "") {
     const loc = document.getElementById("CityName").value;
-    const token = document.getElementById("access_key").value;
+    const token = "NCB8JKE9S4EUUS4ZBUL7T8QZS";
     const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${loc}?unitGroup=us&key=${token}&contentType=json`;
 
     async function wheatherdata(url) {
